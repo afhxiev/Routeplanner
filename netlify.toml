@@ -1,6 +1,6 @@
 [build]
 command = "ng build --configuration=production"
-publish = "dist/routeplanner-frontend/browser"
+publish = "dist/routeplanner-frontend/browser/browser"
 
 [[redirects]]
 from = "/*"
