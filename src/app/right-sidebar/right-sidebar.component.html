@@ -1,0 +1,66 @@
+<div class="sidebar-overlay" *ngIf="isOpen$ | async" (click)="closeSidebar()"></div>
+
+<aside class="sidebar" [class.open]="isOpen$ | async">
+  <div class="sidebar-header">
+    <h2>Filters</h2>
+    <button class="close-button" (click)="closeSidebar()">
+      <i class="fas fa-times"></i>
+    </button>
+  </div>
+
+  <div class="sidebar-content">
+    <div class="filter-section">
+      <div class="filter-label">Length of Trip:</div>
+      <div class="filter-input">
+        <input type="number"
+               [(ngModel)]="filterValues.lengthOfTrip"
+               min="1"
+               placeholder="Enter trip length">
+      </div>
+    </div>
+
+    <div class="filter-section">
+      <div class="filter-label">Different Ports:</div>
+      <div class="filter-input">
+        <input type="number"
+               [(ngModel)]="filterValues.differentPorts"
+               min="1"
+               placeholder="Enter number of ports">
+      </div>
+    </div>
+
+    <div class="filter-section">
+      <div class="filter-label">Include Islands:</div>
+      <div class="filter-input">
+        <input type="checkbox"
+               [(ngModel)]="filterValues.islands">
+      </div>
+    </div>
+
+    <div class="filter-section">
+      <div class="filter-label">Minimum Rating:</div>
+      <div class="filter-input">
+        <input type="number"
+               [(ngModel)]="filterValues.rating"
+               min="1"
+               max="5"
+               (change)="validateRating()"
+               placeholder="Enter minimum rating (1-5)">
+      </div>
+    </div>
+
+    <div class="filter-section">
+      <div class="filter-label">Average Distance (km):</div>
+      <div class="filter-input">
+        <input type="number"
+               [(ngModel)]="filterValues.averageDistance"
+               min="0"
+               placeholder="Enter distance">
+      </div>
+    </div>
+  </div>
+
+  <div class="sidebar-footer">
+    <button class="store-button" (click)="onStoreChanges()">Store Changes</button>
+  </div>
+</aside>

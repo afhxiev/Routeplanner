@@ -1,0 +1,19 @@
+.left-sidebar {
+    width: calc(1/6 * 100vw); /* Half of a single navbar partition */
+    height: calc(80vh - 10px); /* Below the navbar */
+    background-color: #f7f7f7;
+    border-right: 1px solid #ccc;
+  }
+  
+  .partition {
+    height: 15vh; /* Small button-like partition */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .partition:hover {
+    background-color: #ddd;
+  }

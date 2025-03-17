@@ -1,0 +1,27 @@
+.right-button-container {
+    position: fixed;
+    top: 200px; /* Adjust based on your navbar height */
+    right: 20px;
+    z-index: 999;
+  }
+  
+  .filter-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .filter-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .filter-button i {
+    font-size: 16px;
+  }

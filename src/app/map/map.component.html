@@ -1,0 +1,17 @@
+<div class="map-container">
+  <google-map
+    height="100%"
+    width="100%"
+    [center]="center"
+    [zoom]="zoom"
+    [options]="options"
+    (mapClick)="moveMap($event)"
+    (mapMousemove)="move($event)">
+    
+    <map-marker
+      *ngFor="let marker of markers"
+      [position]="marker.getPosition()?.toJSON()"
+      [title]="marker.getTitle()">
+    </map-marker>
+  </google-map>
+</div>

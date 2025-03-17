@@ -1,0 +1,20 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 20vh; /* 1/5 of the screen height */
+    background-color: #f0f0f0;
+  }
+  
+  .nav-segment {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: 1px solid #ccc;
+  }
+  
+  .nav-segment:hover {
+    background-color: #ddd;
+  }
