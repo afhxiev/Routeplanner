@@ -29,11 +29,7 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": [],
-            "prerender": true,
-            "ssr": {
-              "entry": "server.ts"
-            }
+            "scripts": []
           },
           "configurations": {
             "production": {
